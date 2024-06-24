@@ -21,7 +21,7 @@ func NewLogger(p string) *Logger {
 	return &Logger{
 		debug:   log.New(writer, "DEBUG: ", logger.Flags()),
 		info:    log.New(writer, "INFO: ", logger.Flags()),
-		warning: log.New(writer, "WARNIG: ", logger.Flags()),
+		warning: log.New(writer, "WARNING: ", logger.Flags()),
 		err:     log.New(writer, "ERROR: ", logger.Flags()),
 		writer:  writer,
 	}
@@ -29,19 +29,19 @@ func NewLogger(p string) *Logger {
 
 // Create Non-Formatted Logs
 func (l *Logger) Debug(v ...interface{}) {
-	l.debug.Fatalln(v...)
+	l.debug.Println(v...)
 }
 func (l *Logger) Info(v ...interface{}) {
-	l.info.Fatalln(v...)
+	l.info.Println(v...)
 }
 func (l *Logger) Warn(v ...interface{}) {
-	l.warning.Fatalln(v...)
+	l.warning.Println(v...)
 }
 func (l *Logger) Error(v ...interface{}) {
-	l.err.Fatalln(v...)
+	l.err.Println(v...)
 }
 
-// Create Formatted Enabled Logs
+// Create Format Enabled Logs
 func (l *Logger) Debugf(format string, v ...interface{}) {
 	l.debug.Printf(format, v...)
 }
