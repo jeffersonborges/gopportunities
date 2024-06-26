@@ -7,6 +7,18 @@ import (
 	"github.com/jeffersonborges/gopportunities/schemas"
 )
 
+// @BasePath /api/v1
+
+// @Summary Show Opening
+// @Description Show a new job Opening
+// @Tags Openings
+// @Accept json
+// @Produce json
+// @Param id query string true "Opening identification"
+// @Success 200 {object} ShowOpeningResponse
+// @Failure 400 {object} ErrorResponse
+// @Failure 404 {object} ErrorResponse
+// @Router /opening [get]
 func ShowOpeningHanlder(ctx *gin.Context) {
 	id := ctx.Query("id")
 	if id == "" {
