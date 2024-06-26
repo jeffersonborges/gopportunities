@@ -103,7 +103,7 @@ paths:
     delete:
       consumes:
       - application/json
-      description: Delete a new job Opening
+      description: Delete a job Opening
       parameters:
       - description: Opening identification
         in: query
@@ -131,7 +131,7 @@ paths:
     get:
       consumes:
       - application/json
-      description: Show a new job Opening
+      description: Show a job Opening
       parameters:
       - description: Opening identification
         in: query

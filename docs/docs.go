@@ -17,7 +17,7 @@ const docTemplate = `{
     "paths": {
         "/opening": {
             "get": {
-                "description": "Show a new job Opening",
+                "description": "Show a job Opening",
                 "consumes": [
                     "application/json"
                 ],
@@ -160,7 +160,7 @@ const docTemplate = `{
                 }
             },
             "delete": {
-                "description": "Delete a new job Opening",
+                "description": "Delete a job Opening",
                 "consumes": [
                     "application/json"
                 ],
